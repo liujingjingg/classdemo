@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>timer-button 的测试页面</title>
+    <link rel="stylesheet" href="timer-button.css">
+</head>
+<body>
+    <!-- 设计时可以在HTML页面  运行时不可以 -->
+    
+    <!-- <input id="add" type="button" value="添加定时器按钮">  -->
+    <input id="popup" type='button' value="弹出对话框">
+    <hr>
+    <div id="main">
+        <!-- <input type="button" value="同意(6s)" disabled id="button"> -->
+        <!-- <div class="notepad-dlg-goto">
+            <div class="dialogbox">
+                <div class="titlebar">
+                    <p class="title">转到指定行 </p>
+                    <span class="close-btn">X</span>
+                </div>
+                <div class="main">
+                    <label>行号(L)</label>
+                    <br>
+                    <input class="txt-line-num" type="text" autofocus>
+                    <br>
+                    <input class="btn-goto" type="button" value="转到"  >
+                    <input type="button" class="btn-cancel" value="取消">
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="timer-button.js"></script>
+    <script>
+        $(function(){
+            var $btnDlg=$('#popup');
+            $btnDlg.click(function(){
+                $dlgGoto.show({
+                    // num:6,
+                    // title:'同意',
+                    // onClick:('就知道你会同意的!')
+                })
+            })
+
+
+            // var $btnAdd=$('#add');
+            // $btnAdd.click(function(){
+            //     // $timerButton.show('#main')
+            //     $timerButton.show({
+            //         i:60,
+            //         title:'发送验证码',
+            //         onClick:function(){
+            //             console.log('点击了定时器按钮')
+            //         }
+            //     })
+            // })
+        })
+    </script>
+</body>
+</html>
